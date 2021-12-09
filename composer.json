@@ -24,7 +24,6 @@
             "JamesRCZ\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
     "config": {
         "sort-packages": true
     }
