@@ -1,0 +1,31 @@
+{
+    "name": "jamesrcz/pdf-downloader",
+    "description": "Package to download PDF files or create one from url.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jaime C. Rubin-de-Celis",
+            "email": "james@sglm.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "mpdf/mpdf": "^8.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "JamesRCZ\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JamesRCZ\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "sort-packages": true
+    }
+}

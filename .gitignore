@@ -1,0 +1,20 @@
+# Mac
+.DS_Store
+
+# Composer
+/vendor
+composer.lock
+
+# npm
+/node_modules
+/package-lock.json
+
+# VIM
+.*.swp
+.php-cs-fixer.cache
+.sass-cache
+
+# ctags
+/tags
+/tags.lock
+/tags.temp
