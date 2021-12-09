@@ -1,10 +1,10 @@
 {
-    "name": "jamesrcz/pdf-downloader",
+    "name": "jaimercz/pdf-downloader",
     "description": "Package to download PDF files or create one from url.",
     "type": "library",
     "authors": [
         {
-            "name": "Jaime C. Rubin-de-Celis",
+            "name": "James",
             "email": "james@sglm.com"
         }
     ],
