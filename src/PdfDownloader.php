@@ -138,7 +138,7 @@ class PdfDownloader
         }
     }
 
-    public function printPdf(): bool
+    public function printPdfUsingWget(): bool
     {
         $htmlContent = file_get_contents(
             $this->url,
@@ -173,16 +173,16 @@ class PdfDownloader
         return false;
     }
 
-    public function printPdf2()
+    public function printPdf()
     {
         $onRedirect = function (
             RequestInterface $request,
             ResponseInterface $response,
             UriInterface $uri
         ) {
-            echo 'Redirecting! ' . $request->getUri() . ' to ' . $uri . "\n";
+            echo 'Redirecting!!! ' . $request->getUri() . ' to ' . $uri . "\n";
         };
-        $client = new Client([
+        @$client = new Client([
             'base_uri' => $this->url,
             'timeout'  => 2.0
         ]);
@@ -196,13 +196,15 @@ class PdfDownloader
                 'track_redirects' => true
             ]
         ]);
-        echo $response->getStatusCode();
-        echo $response->getHeader('content-type')[0];
+        /* echo $response->getStatusCode(); */
+        /* echo $response->getHeader('content-type')[0]; */
         // Get all of the response headers.
-        foreach ($response->getHeaders() as $name => $values) {
-            echo p($name . ': ' . implode(', ', $values) . "\r\n");
-        }
+        /* foreach ($response->getHeaders() as $name => $values) { */
+        /*     echo p($name . ': ' . implode(', ', $values) . "\r\n"); */
+        /* } */
+
         $htmlBody = $response->getBody();
+        
         if ($htmlBody) {
             $doc        = new \DOMDocument();
             $docBody    = new \DOMDocument();
@@ -229,7 +231,6 @@ class PdfDownloader
             return true;
         }
     }
-
 
     /**
      * Get the PDF (or print one from page)
