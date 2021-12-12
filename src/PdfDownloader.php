@@ -122,7 +122,7 @@ class PdfDownloader
         };
         $client = new Client([
             'base_uri' => $this->url,
-            'timeout'  => 2.0
+            'timeout'  => 5.0
         ]);
         $response = $client->request('GET', $this->url, [
             'allow_redirects' => [
@@ -252,7 +252,7 @@ class PdfDownloader
      */
     public function printPdf() : bool
     {
-        $response = $this->getHttpResponse();
+        @$response = $this->getHttpResponse();
 
         // Get all of the response headers.
         /* echo $response->getStatusCode(); */
