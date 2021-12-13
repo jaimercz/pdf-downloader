@@ -59,7 +59,7 @@ class PdfDownloader
      *
      * @var bool
      */
-    private bool    $replace = false;
+    private bool   $replace = false;
 
     /**
      * Name to be used for the downloaded / created pdf file.
@@ -252,7 +252,7 @@ class PdfDownloader
      */
     public function printPdf() : bool
     {
-        @$response = $this->getHttpResponse();
+        $response = $this->getHttpResponse();
 
         // Get all of the response headers.
         /* echo $response->getStatusCode(); */
