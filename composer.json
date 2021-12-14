@@ -5,13 +5,13 @@
     "authors": [
         {
             "name": "James",
-            "email": "james@sglm.com"
+            "email": "james@sglms.com"
         }
     ],
     "require": {
         "php": ">=8.0",
         "mpdf/mpdf": "^8.0",
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.4"
     },
     "license": "MIT",
     "autoload": {

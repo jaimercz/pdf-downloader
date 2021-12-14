@@ -4,13 +4,13 @@ declare(strict_types = 1);
 /**
  * PDF Downloader
  *
- * PDF Downloader Class is a simple class to download PDF
+ * PDF Downloader is a simple class to download PDFs
  * from the web. If url is not a pdf file, then it creates
  * one frow web using Mpdf.
  *
  * @package     PDFDownloader
  * @author      James RCZ <james@sglms.com>
- * @copyright   MIT
+ * @copyright   All rights reserved, 2021.
  *
  */
 
