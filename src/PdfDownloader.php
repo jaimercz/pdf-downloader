@@ -4,13 +4,13 @@ declare(strict_types = 1);
 /**
  * PDF Downloader
  *
- * PDF Downloader Class is a simple class to download PDF
+ * PDF Downloader is a simple class to download PDFs
  * from the web. If url is not a pdf file, then it creates
  * one frow web using Mpdf.
  *
  * @package     PDFDownloader
  * @author      James RCZ <james@sglms.com>
- * @copyright   MIT
+ * @copyright   All rights reserved, 2021.
  *
  */
 
@@ -59,7 +59,7 @@ class PdfDownloader
      *
      * @var bool
      */
-    private bool    $replace = false;
+    private bool   $replace = false;
 
     /**
      * Name to be used for the downloaded / created pdf file.
@@ -122,7 +122,7 @@ class PdfDownloader
         };
         $client = new Client([
             'base_uri' => $this->url,
-            'timeout'  => 2.0
+            'timeout'  => 5.0
         ]);
         $response = $client->request('GET', $this->url, [
             'allow_redirects' => [
